@@ -9,13 +9,11 @@
 //Stores the text in a text property on the note.
 //Has a method that will return the note text.
 (function(exports) {
-class Note { 
-  constructor(text) {
-    this.text = text;
+function Note(message) { 
+    this.text = message;
   }
-  display(){
-    console.log(this.text)
+  Note.prototype.display = function(){
+    return this.text;
   };
-};
 exports.Note = Note;
 })(this);
